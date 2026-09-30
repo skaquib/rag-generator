@@ -1,0 +1,7 @@
+[server]
+# Keep in step with RAG_MAX_UPLOAD_MB (default 25)
+maxUploadSize = 25
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false

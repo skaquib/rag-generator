@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-generator"
+version = "0.1.0"
+description = "Turn any document set into a grounded question-answering (RAG) app at runtime."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Mohammed Aquib Javed Shaikh" }]
+dependencies = [
+    "anthropic>=1.0",
+    "numpy>=1.26",
+    "pypdf>=4.0",
+    "python-docx>=1.1",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "python-multipart>=0.0.9",
+    "streamlit>=1.35",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dense = ["fastembed>=0.3"]
+dev = ["pytest>=8", "httpx>=0.27", "ruff>=0.5", "pip-audit>=2.7", "bandit>=1.7"]
+
+[project.scripts]
+rag-generator = "rag_generator.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101"]  # asserts are fine in tests
+
+[tool.ruff.lint.per-file-ignores]
+"src/rag_generator/cli.py" = ["S603", "S404"]  # launches streamlit with a fixed argv, no shell
+"src/rag_generator/api.py" = ["B008"]  # File(...) in defaults is the FastAPI idiom

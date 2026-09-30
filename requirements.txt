@@ -1,0 +1,12 @@
+# Runtime dependencies (mirrors pyproject.toml). For development: pip install -e ".[dev,dense]"
+anthropic>=1.0
+numpy>=1.26
+pypdf>=4.0
+python-docx>=1.1
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9
+streamlit>=1.35
+python-dotenv>=1.0
+# Optional: dense embeddings for hybrid retrieval (BM25 is used on its own without it)
+# fastembed>=0.3

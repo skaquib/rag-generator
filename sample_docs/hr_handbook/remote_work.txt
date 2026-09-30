@@ -1,0 +1,9 @@
+Northwind Labs Remote Work Guidelines
+
+Eligibility. Employees who have completed their 90-day probation period may work remotely up to 3 days per week. Fully remote arrangements require approval from both the line manager and the Head of People.
+
+Equipment. The company provides a laptop, one external monitor and a one-time home office allowance of USD 600. Receipts must be submitted within 30 days of purchase.
+
+Core hours. Remote employees must be available between 10:00 and 15:00 in their local time zone.
+
+Security. Company data must only be accessed through the corporate VPN. Public Wi-Fi may only be used with the VPN switched on. Lost or stolen devices must be reported to the IT helpdesk within 24 hours.
